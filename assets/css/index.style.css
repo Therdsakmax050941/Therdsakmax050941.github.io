@@ -39,7 +39,9 @@ nav{
     border-radius: 4px;
     z-index: 1;
    }
-   
+   .custom-container {
+    margin-bottom: 20px;
+  }
    .download-button .docs {
     display: flex;
     align-items: center;
@@ -162,6 +164,7 @@ nav{
     z-index: 1;
     text-shadow: #000 0px 0px 5px, #000 0px 0px 10px, #000 0px 0px 15px;
   }
+
   
   .certifications-section {
     background-color: #f8f9fa; /* เปลี่ยนสีพื้นหลังตามต้องการ */
@@ -206,7 +209,7 @@ nav{
 }
 
   
-  .tools_title {
+.tools_title {
     width: 100%;
     display: inline-block;
     word-break: break-all;
@@ -215,4 +218,89 @@ nav{
     text-overflow: ellipsis;
     text-align: center;
     margin: 1rem auto;
+}
+@keyframes shakeHands {
+  0%, 100% {
+    transform: rotate(0deg);
   }
+  25%, 75% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+.hand-shake {
+  font-size: 50px;
+  display: inline-block;
+  animation: shakeHands 5s infinite;
+}
+
+  .logo {
+    height: 250px;
+    font-size: 40px;
+  }
+.logo b {
+    font: 2em "Vibur";
+    color: rgb(7, 7, 7);
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #f8f6f6, 0 0 0.5em #f8f8f8, 0 0 0.1em #fffefe, 0 10px 3px #646363;
+}
+.logo b span{
+    animation: blink linear infinite 2s;
+  }
+.logo b span:nth-of-type(2){
+    animation: blink linear infinite 3s;
+  }
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #fdfdfd;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #fcfafa;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #fcf9f9;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+  #btn-twtr{
+    clear:both;
+    color:#fff;
+    border:2px solid;
+    border-radius:3px;
+    text-align:center;
+    text-decoration:none;
+    display:block;
+    font-size:14px;
+    padding:5px 10px;
+    position:absolute;
+    bottom:20px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    background:rgba(0,0,0,0.2);
+    box-shadow:0 0 0px 3px rgba(0,0,0,0.2);
+    opacity:0.4
+  }#btn-twtr:hover{color:#fff;opacity:1}
