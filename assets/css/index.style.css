@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+.download-button {
+    position: relative;
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+   }
+   
+   .download-button .docs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: #242a35;
+    border: solid 1px #e8e8e82d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   
+   .download {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 4px;
+    transform: translateY(0%);
+    background-color: #01e056;
+    border: solid 1px #01e0572d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover .download {
+    transform: translateY(100%)
+   }
+   
+   .download svg polyline,.download svg line {
+    animation: docs 1s infinite;
+   }
+   
+   @keyframes docs {
+    0% {
+     transform: translateY(0%);
+    }
+   
+    50% {
+     transform: translateY(-15%);
+    }
+   
+    100% {
+     transform: translateY(0%);
+    }
+   }
+   .timeline-item {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline-icon {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #686868; /* สีของเส้นเชื่อม */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-content {
+    margin-left: 50px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 29px;
+    top: 0;
+    height: 100%;
+    width: 2px; /* ความหนาของเส้นเชื่อม */
+    background-color: #838383; /* สีของเส้นเชื่อม */
+  }
+  .bg-header {
+    color: white;
+    text-shadow: #070707 0px 0px 5px, #030303 0px 0px 10px, #050505 0px 0px 15px;
+    width: 100%;
+    height: 30vh;
+    background-image: url('/assets/Imgs/coding.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* จัดให้คำอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center; /* จัดให้คำอยู่ตรงกลางในแนวนอน */
+    box-shadow: #c2c2c2 0px 0px 5px, #c4c3c3 0px 0px 10px, #d1d1d1 0px 0px 15px;
+}
+.tools_container {
+    overflow: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .tools_card {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    width: 100%;
+  }
+  
+  .tools_title {
+    width: 100%;
+    display: inline-block;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 1rem auto;
+  }
